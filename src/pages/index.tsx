@@ -1,6 +1,7 @@
+import { Box } from "@chakra-ui/layout";
 import { GetStaticProps } from "next";
 import { FC } from "react";
-import { Container } from "../components/Container";
+import Header from "../components/Header";
 import { getPersonalizedMovies } from "../utils/apis";
 
 type IndexProps = {
@@ -15,8 +16,11 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
 };
 
 const Index: FC<IndexProps> = ({ personalizedMovies }) => {
-  console.log(personalizedMovies);
-  return <Container height="100vh">Index</Container>;
+  return (
+    <Box>
+      <Header></Header>
+    </Box>
+  );
 };
 
 export default Index;
