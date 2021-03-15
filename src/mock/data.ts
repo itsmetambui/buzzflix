@@ -8,13 +8,13 @@ export const personalized = {
         height: 1419,
         id: "/title/tt0087538/images/rm3598319872",
         url:
-          "https://m.media-amazon.com/images/M/MV5BNTkzY2YzNmYtY2ViMS00MThiLWFlYTEtOWQ1OTBiOGEwMTdhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+          "https://occ-0-395-64.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABUYLolq_XZqb03iMpNaeYmPp5pErmI5bigSQlt7Yr7Kvfw6jT1AZYLpVGoHTUk6DuD38CMEOpjGhSqqeaE11t-4-EvSa.webp?r=359",
         width: 909,
       },
       runningTimeInMinutes: 126,
-      title: "The Karate Kid",
+      title: "Suits",
       titleType: "movie",
-      year: 1984,
+      year: 2012,
     },
     certificates: {
       US: [
@@ -43,7 +43,7 @@ export const personalized = {
       author: "John Vogel <jlvogel@comcast.net>",
       id: "/title/tt0087538/plot/ps0023847",
       text:
-        "Daniel and his mother move from New Jersey to California. She has a wonderful new job, but Daniel quickly discovers that a dark haired Italian boy with a Jersey accent doesn't fit into the blond surfer crowd. Daniel manages to talk his way out of some fights, but he is finally cornered by several who belong to the same karate school. As Daniel is passing out from the beating he sees Miyagi, the elderly gardener leaps into the fray and save him by outfighting half a dozen teenagers. Miyagi and Daniel soon find out the real motivator behind the boys' violent attitude in the form of their karate teacher. Miyagi promises to teach Daniel karate and arranges a fight at the all-valley tournament some months off. When his training begins, Daniel doesn't understand what he is being shown. Miyagi seems more interested in having Daniel paint fences and wax cars than teaching him Karate.",
+        "Lawyers need to be clever, cunning and silver-tongued. Actually going to law school is optional, right?",
     },
   },
   genres: [
