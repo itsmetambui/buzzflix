@@ -1,5 +1,5 @@
 import mock from "../utils/mock";
-import { personalized } from "./data";
+import { moviesMap, personalized, movies } from "./data";
 import endpoints from "../utils/endpoints";
 
 mock.onGet(endpoints.getPersonalizedMovies()).reply(() => {
@@ -7,11 +7,7 @@ mock.onGet(endpoints.getPersonalizedMovies()).reply(() => {
 });
 
 mock.onGet("/movies").reply((config) => {
-  const title = config.params.title;
-  return [
-    200,
-    {
-      title,
-    },
-  ];
+  console.log(config);
+  const title = config?.params?.title;
+  return [200, title ? moviesMap[title] : movies];
 });

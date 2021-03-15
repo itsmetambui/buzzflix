@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { FC } from "react";
 import Slider from "react-slick";
 import { useColorModeValue } from "@chakra-ui/color-mode";
+import { useBreakpointValue } from "@chakra-ui/media-query";
 
 const Arrow = (props: any) => {
   const { className, style, onClick } = props;
@@ -21,11 +22,12 @@ const Arrow = (props: any) => {
 };
 
 const GenreMovies: FC<Genre> = ({ genreName, movies }) => {
+  const slidesToShow = useBreakpointValue({ base: 2, sm: 2, md: 6, lg: 8 });
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 8,
+    slidesToShow,
     slidesToScroll: 2,
     nextArrow: <Arrow />,
     prevArrow: <Arrow />,

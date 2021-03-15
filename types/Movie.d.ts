@@ -9,35 +9,33 @@ type Movie = {
       url: string;
       width: number;
     };
-    runningTimeInMinutes: number;
+    runningTimeInMinutes?: number;
     title: string;
     titleType: string;
     year: number;
   };
-  certificates: {
-    US: [
-      {
-        certificate: string;
-        certificateNumber: number;
-        country: string;
-      }
-    ];
+  certificates?: {
+    US: {
+      certificate: string;
+      certificateNumber?: number;
+      country: string;
+    }[];
   };
   ratings: {
     canRate: boolean;
-    rating: number;
-    ratingCount: number;
-    topRank: number;
+    rating?: number;
+    ratingCount?: number;
+    topRank?: number;
   };
   genres: string[];
   releaseDate: string;
   plotOutline: {
-    author: string;
+    author?: string;
     id: string;
     text: string;
   };
-  plotSummary: {
-    author: string;
+  plotSummary?: {
+    author?: string;
     id: string;
     text: string;
   };

@@ -3,7 +3,7 @@ import { GetStaticProps } from "next";
 import { FC } from "react";
 import GenreMovies from "../components/GenreMovies";
 import Header from "../components/Header";
-import MainMovie from "../components/MainMovie";
+import HeroMovie from "../components/HeroMovie";
 import { getPersonalizedMovies } from "../utils/apis";
 
 type IndexProps = {
@@ -24,11 +24,11 @@ const Index: FC<IndexProps> = ({
     <Box>
       <Header></Header>
       <Box pt={[16, 16, 0]}>
-        <MainMovie
+        <HeroMovie
           id={mainMovie.id}
           imageUrl={mainMovie.title.image.url}
           title={mainMovie.title.title}
-          description={mainMovie.plotSummary.text}
+          description={mainMovie.plotSummary?.text}
         />
       </Box>
       <Box px={16} py={8}>

@@ -32,7 +32,7 @@ export const personalized = {
       topRank: 1620,
     },
     genres: ["Action", "Drama", "Family", "Sport"],
-    releaseDate: "1984-06-22",
+    releaseDate: "2012-06-22",
     plotOutline: {
       author: "Anonymous",
       id: "/title/tt0087538/plot/po0945912",
@@ -3580,3 +3580,11 @@ export const personalized = {
     },
   ],
 };
+
+export const movies = personalized.genres.reduce((acc: Movie[], cur: Genre) => {
+  return [...acc, ...cur.movies];
+}, []);
+
+export const moviesMap: { [key: string]: Movie } = movies.reduce((acc, cur) => {
+  return { ...acc, [cur.id.split("/")[2]]: cur };
+}, {});

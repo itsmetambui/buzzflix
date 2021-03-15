@@ -7,7 +7,7 @@ import { Button } from "@chakra-ui/button";
 type MainMovieProps = {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   imageUrl: string;
 };
 

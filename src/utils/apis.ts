@@ -65,7 +65,15 @@ export const getPersonalizedMovies = async () =>
     }),
   });
 
-export const getPMovie = async (title: string) =>
+export const getMovies = async () =>
+  fetcher<Movie[]>({
+    url: endPoints.getMovies(),
+    options: makeOptions({
+      method: "GET",
+    }),
+  });
+
+export const getMovieDetails = async (title: string) =>
   fetcher<Movie>({
     url: endPoints.getMovie(title),
     options: makeOptions({

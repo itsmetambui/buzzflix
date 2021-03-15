@@ -12,6 +12,7 @@ export const makeQueryString: (queryObject: object) => string = (
 
 const endPoints = {
   getPersonalizedMovies: () => "/movies/personalized",
+  getMovies: () => "/movies",
   getMovie: (title: string) => `/movies${makeQueryString({ title })}`,
 };
 
