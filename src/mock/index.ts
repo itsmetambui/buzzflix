@@ -7,7 +7,6 @@ mock.onGet(endpoints.getPersonalizedMovies()).reply(() => {
 });
 
 mock.onGet("/movies").reply((config) => {
-  console.log(config);
   const title = config?.params?.title;
   return [200, title ? moviesMap[title] : movies];
 });

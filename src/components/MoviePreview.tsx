@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { FC, useState } from "react";
-import { Box, Flex, Heading } from "@chakra-ui/layout";
+import { Box, Heading } from "@chakra-ui/layout";
 import { Collapse } from "@chakra-ui/transition";
 import MovieInfoSection from "./MovieInfoSection";
 

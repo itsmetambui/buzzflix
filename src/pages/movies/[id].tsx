@@ -6,7 +6,7 @@ import { ParsedUrlQuery } from "querystring";
 import Header from "../../components/Header";
 import MovieInfoSection from "../../components/MovieInfoSection";
 import { moviesMap } from "../../mock/data";
-import { getMovieDetails, getMovies } from "../../utils/apis";
+import { getMovies } from "../../utils/apis";
 
 type MovieDetailProps = {
   movie: Movie;
