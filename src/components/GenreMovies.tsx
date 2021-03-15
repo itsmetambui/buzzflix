@@ -1,10 +1,10 @@
 import { Box, Heading } from "@chakra-ui/layout";
-import Link from "next/link";
-import Image from "next/image";
 import React, { FC } from "react";
 import Slider from "react-slick";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { useBreakpointValue } from "@chakra-ui/media-query";
+
+import MoviePreview from "./MoviePreview";
 
 const Arrow = (props: any) => {
   const { className, style, onClick } = props;
@@ -44,18 +44,15 @@ const GenreMovies: FC<Genre> = ({ genreName, movies }) => {
         {genreName}
       </Heading>
       <Slider {...settings}>
-        {movies.map((movie) => (
-          <Box key={movie.id} p={0.5}>
-            <Link href={`/movies/${movie.id.split("/")[2]}`}>
-              <a>
-                <Image
-                  src={movie.title.image.url}
-                  alt={movie.title.title}
-                  height={300}
-                  width={200}
-                />
-              </a>
-            </Link>
+        {movies.map(({ id, title, releaseDate, ratings }) => (
+          <Box key={id} p={0.5}>
+            <MoviePreview
+              id={id.split("/")[2]}
+              title={title.title}
+              imageUrl={title.image.url}
+              releaseDate={releaseDate}
+              rating={ratings.rating}
+            />
           </Box>
         ))}
       </Slider>

@@ -81,7 +81,7 @@ const MovieDetailPage: React.FC<MovieDetailProps> = ({ movie }) => {
             name="Casts"
             value="Michael Smith, Anton Cropper, Christopher Misiano, and more..."
           />
-          <Button>Watch now</Button>
+          <Button mt={8}>Watch now</Button>
         </Box>
       </Flex>
     </Box>

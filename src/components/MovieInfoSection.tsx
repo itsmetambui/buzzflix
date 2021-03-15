@@ -13,9 +13,7 @@ const MovieInfoSection: FC<MovieInfoSectionProps> = ({
   return (
     <>
       <Text fontWeight="bold">{name}</Text>
-      <Text mb={8} fontSize="md">
-        {value}
-      </Text>
+      <Text fontSize="md">{value}</Text>
     </>
   );
 };
