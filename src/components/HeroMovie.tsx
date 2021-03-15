@@ -24,7 +24,7 @@ const MainMovie: FC<MainMovieProps> = ({
         position="absolute"
         top="0"
         left={0}
-        w="40%"
+        w={["60%", "50%", "40%"]}
         height="100%"
         px={[4, 8, 16]}
         bgGradient="linear(to-r, rgba(0,0,0,0.59), rgba(0,0,0,0.19))"
@@ -40,7 +40,7 @@ const MainMovie: FC<MainMovieProps> = ({
         >
           {title}
         </Heading>
-        <Text mb={8} fontSize="xl" color="white">
+        <Text mb={8} fontSize={["sm", "sm", "xl"]} color="white">
           {description}
         </Text>
         <Link href={`/movies/${id}`}>

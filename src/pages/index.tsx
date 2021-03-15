@@ -31,7 +31,7 @@ const Index: FC<IndexProps> = ({
           description={mainMovie.plotSummary?.text}
         />
       </Box>
-      <Box px={16} py={8}>
+      <Box px={[8, 8, 16]} py={8}>
         {genres.map((genre) => (
           <Box key={genre.genreName} py={8}>
             <GenreMovies genreName={genre.genreName} movies={genre.movies} />

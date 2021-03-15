@@ -22,7 +22,7 @@ const Arrow = (props: any) => {
 };
 
 const GenreMovies: FC<Genre> = ({ genreName, movies }) => {
-  const slidesToShow = useBreakpointValue({ base: 2, sm: 2, md: 6, lg: 8 });
+  const slidesToShow = useBreakpointValue({ base: 2, sm: 4, md: 6, lg: 8 });
   const settings = {
     dots: false,
     infinite: false,
