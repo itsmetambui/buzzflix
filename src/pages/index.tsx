@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/layout";
 import { GetStaticProps } from "next";
 import { FC } from "react";
+import GenreMovies from "../components/GenreMovies";
 import Header from "../components/Header";
 import MainMovie from "../components/MainMovie";
 import { getPersonalizedMovies } from "../utils/apis";
@@ -29,6 +30,13 @@ const Index: FC<IndexProps> = ({
           title={mainMovie.title.title}
           description={mainMovie.plotSummary.text}
         />
+      </Box>
+      <Box px={16} py={8}>
+        {genres.map((genre) => (
+          <Box key={genre.genreName} py={8}>
+            <GenreMovies genreName={genre.genreName} movies={genre.movies} />
+          </Box>
+        ))}
       </Box>
     </Box>
   );
