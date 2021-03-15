@@ -25,7 +25,7 @@ const Index: FC<IndexProps> = ({
       <Header></Header>
       <Box pt={[16, 16, 0]}>
         <HeroMovie
-          id={mainMovie.id}
+          id={mainMovie.id.split("/")[2]}
           imageUrl={mainMovie.title.image.url}
           title={mainMovie.title.title}
           description={mainMovie.plotSummary?.text}

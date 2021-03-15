@@ -1,10 +1,10 @@
 import { Button } from "@chakra-ui/button";
 import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
-import { useBreakpointValue } from "@chakra-ui/media-query";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import { ParsedUrlQuery } from "querystring";
 import Header from "../../components/Header";
+import MovieInfoSection from "../../components/MovieInfoSection";
 import { moviesMap } from "../../mock/data";
 import { getMovieDetails, getMovies } from "../../utils/apis";
 
@@ -55,6 +55,8 @@ const MovieDetailPage: React.FC<MovieDetailProps> = ({ movie }) => {
             alt={movie.title.title}
             height={500}
             width={350}
+            layout="intrinsic"
+            objectFit="cover"
           />
         </Box>
         <Box flex={1}>
@@ -67,21 +69,18 @@ const MovieDetailPage: React.FC<MovieDetailProps> = ({ movie }) => {
             {movie.title.title}
           </Heading>
           <Text mb={8} fontSize={["sm", "sm", "md"]}>
-            {movie.plotSummary?.text}
+            {movie.plotSummary?.text || movie.plotOutline.text}
           </Text>
-          <Text fontWeight="bold">Release date</Text>
-          <Text mb={8} fontSize="md">
-            {movie.releaseDate}
-          </Text>
-          <Text fontWeight="bold">Rating</Text>
-          <Text mb={8} fontSize="md">
-            {movie.ratings.rating || "N/A"}
-          </Text>
+          <MovieInfoSection name="Release date" value={movie.releaseDate} />
+          <MovieInfoSection
+            name="Rating"
+            value={movie.ratings.rating?.toString()}
+          />
           {/* TODO: get real cast from ibmd */}
-          <Text fontWeight="bold">Casts</Text>
-          <Text mb={8} fontSize="md">
-            Michael Smith, Anton Cropper, Christopher Misiano, and more...
-          </Text>
+          <MovieInfoSection
+            name="Casts"
+            value="Michael Smith, Anton Cropper, Christopher Misiano, and more..."
+          />
           <Button>Watch now</Button>
         </Box>
       </Flex>
