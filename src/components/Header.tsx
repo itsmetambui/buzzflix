@@ -15,9 +15,11 @@ const Header = () => (
     justifyContent="space-between"
   >
     <Link href="/">
-      <Heading color="teal.500" fontSize="xl" fontWeight="extrabold">
-        BUZZFLIX
-      </Heading>
+      <a>
+        <Heading color="teal.500" fontSize="xl" fontWeight="extrabold">
+          BUZZFLIX
+        </Heading>
+      </a>
     </Link>
 
     <ColorModeSwitcher />
